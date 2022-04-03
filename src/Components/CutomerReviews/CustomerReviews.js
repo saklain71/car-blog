@@ -1,12 +1,18 @@
 import React from 'react';
+import CustomerReviewMap from '../CustomerReviewMap/CustomerReviewMap';
 import Reviews from '../CustomHook/Reviews';
 
 const CustomerReviews = () => {
     const [reviews, setReview] = Reviews();
+   
     return (
         <div className="text-center">
+            
             {
-                <h1>reviews: {reviews.length}</h1>
+                reviews.map(reviews => <CustomerReviewMap
+                reviews ={reviews}
+                key= {reviews.id}
+                ></CustomerReviewMap>)
             }
         </div>
     );
