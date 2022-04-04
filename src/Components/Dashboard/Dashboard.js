@@ -1,90 +1,100 @@
 import React from 'react';
-import { Bar, BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Line, LineChart, Pie, PieChart, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 
 const Dashboard = () => {
 
     const data = [
         {
-            name: 'Page A',
-            price: 4000,
+            month: 'March',
+            price: 400000,
             pv: 2400,
             amt: 2400,
         },
         {
-            name: 'Page B',
-            price: 3000,
+            month: 'April',
+            price: 300000,
             pv: 1398,
             amt: 2210,
         },
         {
-            name: 'Page C',
-            price: 2000,
+            month: 'May',
+            price: 200000,
             pv: 9800,
             amt: 2290,
         },
         {
-            name: 'Page D',
-            price: 2780,
+            month: 'June',
+            price: 278000,
             pv: 3908,
             amt: 2000,
         },
         {
-            name: 'Page E',
-            price: 1890,
+            month: 'July',
+            price: 189000,
             pv: 4800,
             amt: 2181,
         },
         {
-            name: 'Page F',
-            price: 2390,
+            month: 'August',
+            price: 239000,
             pv: 3800,
             amt: 2500,
         },
         {
-            name: 'Page G',
-            price: 3490,
+            month: 'September',
+            price: 349000,
             pv: 4300,
             amt: 2100,
         }
     ];
     return (
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-30 sm:grid-cols-1  lg:grid-cols-2 ">
 
             <div >
                 <h1 className="text-center">Month Wise Sell</h1>
-                <LineChart width={600} height={300} data={data}>
-                    <Line type="monotone" dataKey="price" stroke="#8884d8" />
-                    <Line dataKey="name" ></Line>
-                    <XAxis></XAxis>
-                    <YAxis></YAxis>
-                    <linearGradient></linearGradient>
+                <LineChart width={450} height={350} data={data}>
+                    <Line  dataKey="price" stroke="#8884d8" />
+                    <Line dataKey="month" ></Line>
+                    <XAxis dataKey="month"></XAxis>
+                    <YAxis name="price" dataKey="price"></YAxis>
                     <Tooltip></Tooltip>
                 </LineChart>
             </div>
             <div>
-                <h1 className="text-center">Month Wise Sell</h1>
+                <h1 className="text-center">Invest Vs Revenue</h1>
 
-                <BarChart width={600} height={350} data={data}>
-                    <XAxis dataKey="name" stroke="#8884d8" />
-                    <YAxis />
-                    <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
-                    <Legend width={100} wrapperStyle={{ top: 40, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px' }} />
-                    <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                    <Bar dataKey="uv" fill="#8884d8" barSize={30} />
+                <BarChart width={450} height={350} data={data}>
+                    <XAxis dataKey="price" stroke="#8884d8" />
+                    <YAxis dataKey="month" name="month" />
+                    <CartesianGrid stroke="green" strokeDasharray="5 5" />
+                    <Bar dataKey="month" fill="#8884d8" barSize={30} />
+                    <Tooltip></Tooltip>
                 </BarChart>
-                );
 
-
-            </div>
-            <div>
-                <h1 className="text-center">Month Wise Sell</h1>
 
 
             </div>
             <div>
                 <h1 className="text-center">Month Wise Sell</h1>
+                <RadarChart outerRadius={90} width={450} height={350} data={data}>
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="price" />
+                    <PolarRadiusAxis angle={30} domain={[0, 150]} />
+                    <Radar name="month" dataKey="month" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                    <Radar name="Month" dataKey="price" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+                    
+                </RadarChart>
 
+
+            </div>
+            <div>
+                <h1 className="text-center"> Revenue vs Investment</h1>
+                <PieChart width={450} height={350}>
+                    <Pie data={data} dataKey="price" nameKey="month" outerRadius={50} fill="#8884d8" />
+                    <Pie data={data} dataKey="price" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+                    <Tooltip></Tooltip>
+                </PieChart>
 
             </div>
 
