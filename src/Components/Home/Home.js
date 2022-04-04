@@ -2,15 +2,23 @@ import React from 'react';
 import CustomerReviews from '../CutomerReviews/CustomerReviews';
 import car from '../../Images/rolls-royce.jpg'
 import './Home.css'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const Home = () => {
+
+    const navigate = useNavigate();
+    const showAllReview =()=>{
+        const path = "/reviews";
+        navigate(path);
+    }
+
     return (
         <div>
-            <div className='grid grid-cols-2 mt-4 p-4 
-            firs-div '>
+            <div className="grid grid-cols-2 mt-4 p-4 
+            firs-div ">
                 <div className="">
                     <h1 className="text-3xl mb-5">This is the first choice of people</h1>
                     <h3 className="text-2xl mb-5">Take a tour by luxurious Rolls-Royce</h3>
@@ -25,6 +33,9 @@ const Home = () => {
             {
                 <CustomerReviews></CustomerReviews>
             }
+           <div className="text-center mt-5">
+           <button className="bg-blue-300 p-2 border-2 border-r-2" onClick={showAllReview}><p>See All Reviews</p></button>
+           </div>
         </div>
 
     );
