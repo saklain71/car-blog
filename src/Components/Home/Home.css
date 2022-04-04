@@ -1,0 +1,7 @@
+@media  (max-width: 640px) { 
+    .firs-div{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

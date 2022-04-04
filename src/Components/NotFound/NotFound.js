@@ -2,8 +2,9 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div>
-            <h1>Not Founded</h1>
+        <div className='flex justify-center'>
+            <h1 >Not Founded</h1>
+            
         </div>
     );
 };

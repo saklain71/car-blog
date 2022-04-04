@@ -1,7 +1,6 @@
 import React from 'react';
 import { Bar, BarChart, CartesianGrid, Line, LineChart, Pie, PieChart, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, Tooltip, XAxis, YAxis } from 'recharts';
-
-
+import './Dashboard.css'
 const Dashboard = () => {
 
     const data = [
@@ -49,11 +48,11 @@ const Dashboard = () => {
         }
     ];
     return (
-        <div className="grid md:grid-cols-2 gap-30 sm:grid-cols-1  lg:grid-cols-2 ">
+        <div className="grid md:grid-cols-2 gap-30 sm:grid-cols-1  lg:grid-cols-2  dashboard-main">
 
             <div >
                 <h1 className="text-center">Month Wise Sell</h1>
-                <LineChart width={450} height={350} data={data}>
+                <LineChart  width={450} height={350} data={data}>
                     <Line  dataKey="price" stroke="#8884d8" />
                     <Line dataKey="month" ></Line>
                     <XAxis dataKey="month"></XAxis>
