@@ -6,7 +6,7 @@ const ReviewHeader = (props) => {
     const [reviews, setReviews] = Reviews();
    
     return (
-        <div className="flex flex-wrap justify-center mt-6 gap-2 p-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 p-2 mt-6 gap-2 p-2">
             
           {
               reviews.map(reviews => <CustomerReviewMap

@@ -5,8 +5,8 @@ const CustomerReviewMap = (props) => {
   
   
     return (
-        <div>
-            <div className="flex flex-wrap justify-center mt-6 gap-2 border-2 p-10 bg-orange-300">
+        <div className="">
+            <div className=" mt-6 gap-2 border-2 p-10 ">
             <h3><b>Name</b> : ({name})</h3>
             <p> <b>Review</b> : {title}</p>
             <p><span> <b>Ratings</b>: {ratings}</span></p>
