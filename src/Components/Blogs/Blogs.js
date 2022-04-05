@@ -15,8 +15,7 @@ const Blogs = () => {
                 <div className="text-center mt-5">
                     <h1><b><u>In short about SEMANTIC tag</u></b></h1>
                     <p className="p-5">
-
-
+                    One of the most important features of HTML5 is its semantics.Semantic HTML refers to syntax that makes the HTML more comprehensible by better defining the different sections and layout of web pages.Semantic Html elements are those that clearly describe their meaning in a human and machine readable way.Semantic HTML tags provide information about the contents of those tags that goes beyond just how they look on a page.It’s better for Search Engine Optimization.It provides screen readers with information.As a semantic tag typically contains below information : .authorship information .copyright information .contact information .sitemap .back to top links .related documents.This is known as using semantic HTML.
                     </p>
                 </div>
             </div>
