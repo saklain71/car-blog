@@ -1,8 +1,10 @@
 # Project- Car Blog
 Live-site Link ()
--bullet point 
-- bullet point 
-- 
+
+- This is react based project.
+- Used TailWind CSS framework for UI.
+- Used CustoomHook to fetch reviews as common component.
+- Added Not Founded compponent if link path not matched.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
