@@ -34,7 +34,7 @@ const Home = () => {
                 <CustomerReviews></CustomerReviews>
             }
            <div className="text-center mt-5">
-           <button className="bg-blue-300 p-2 border-2 border-r-2" onClick={showAllReview}><p>See All Reviews</p></button>
+           <button className="bg-blue-300 p-2 border-2 border-r-2 mb-5" onClick={showAllReview}><p>See All Reviews</p></button>
            </div>
         </div>
 
